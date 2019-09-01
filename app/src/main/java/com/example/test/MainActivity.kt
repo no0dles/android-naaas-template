@@ -16,13 +16,11 @@ class MainActivity : Activity() {
 
         val myWebView: WebView = findViewById(R.id.webview)
         myWebView.settings.javaScriptEnabled = true
-        myWebView.loadUrl("https://order.mlinkdev.ortho-team.ch")
+        myWebView.loadUrl(getResources().getString(R.string.app_url))
 
         val androidId = Settings.Secure.getString(
             contentResolver,
             Settings.Secure.ANDROID_ID
         )
-
-
     }
 }
